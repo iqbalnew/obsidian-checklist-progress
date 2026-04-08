@@ -42,7 +42,7 @@ class Extension implements PluginValue {
         for (const line of state.doc.iterLines()) {
             lines.push({
                 txt: line, idx,
-                checked: targetLine.text == line ? target.checked : undefined
+                checked: targetLine.number - 1 == idx ? target.checked : undefined
             });
             idx++;
         }
